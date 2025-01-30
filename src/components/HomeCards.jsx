@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
+import cards from '../cards.json';
 
 import Card from './Card';
 
-const HomeCards = (props) => {
+const HomeCards = () => {
   return (
     <section>
       <div className="container-xl lg:container m-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
-          {props.cardContent.map((card, index) => (
-            <Card key={index}>
+          {cards.map((card, index) => (
+            <Card key={index} bg={card.bg}>
               <h2 className="text-2xl font-bold">{card.title}</h2>
               <p className="mt-2 mb-4">{card.description}</p>
               <a
@@ -22,19 +22,6 @@ const HomeCards = (props) => {
       </div>
     </section>
   );
-};
-
-HomeCards.propTypes = {
-  cardContent: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      target: PropTypes.shape({
-        link: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired
-  )
 };
 
 export default HomeCards;

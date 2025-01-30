@@ -32,11 +32,9 @@ const Navbar = () => {
 
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             <a className="flex flex-shrink-0 items-center" href="/index.html">
-              <img className="h-10 w-auto" src={logo} alt="PropertyPulse" />
+              <img className="h-10 w-auto" src={logo} alt="JobsPulse" />
 
-              <span className="hidden md:block text-white text-2xl font-bold ml-2">
-                PropertyPulse
-              </span>
+              <span className="hidden md:block text-white text-2xl font-bold ml-2">JobsPulse</span>
             </a>
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
@@ -103,7 +101,7 @@ const Navbar = () => {
                   aria-haspopup="true">
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src="images/profile.png" alt="" />
+                  <img className="h-8 w-8 rounded-full" src={logo} alt="" />
                 </button>
               </div>
 

@@ -1,0 +1,21 @@
+[
+    {
+        "title": "For Developers",
+        "description": "Browser your React jobs and apply for your dream job.",
+        "target": {
+            "link": "/jobs.html",
+            "text": "Browse Jobs"
+        },
+        "bg": "bg-gray-100"
+    },
+    {
+        "title": "For Employers",
+        "description":
+        "List your job and find the best React developers.",
+        "target": {
+            "link": "/add-job.html",
+            "text": "Add Job"
+        },
+        "bg": "bg-indigo-100"
+    }
+]
