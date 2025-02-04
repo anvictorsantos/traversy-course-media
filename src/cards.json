@@ -3,7 +3,7 @@
         "title": "For Developers",
         "description": "Browser your React jobs and apply for your dream job.",
         "target": {
-            "link": "/jobs.html",
+            "link": "/jobs",
             "text": "Browse Jobs"
         },
         "bg": "bg-gray-100"
