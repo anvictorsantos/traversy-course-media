@@ -49,9 +49,9 @@ const Navbar = () => {
                   Jobs
                 </a>
                 <a
-                  href="/add-property.html"
+                  href="/add-job.html"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
-                  Add Property
+                  Add Job
                 </a>
               </div>
             </div>
@@ -155,9 +155,9 @@ const Navbar = () => {
             Jobs
           </a>
           <a
-            href="/add-property.html"
+            href="/add-job.html"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
-            Add Property
+            Add Job
           </a>
           <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4">
             <i className="fa-brands fa-google mr-2"></i>
