@@ -44,9 +44,9 @@ const Navbar = () => {
                   Home
                 </a>
                 <a
-                  href="/properties.html"
+                  href="/jobs.html"
                   className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
-                  Properties
+                  Jobs
                 </a>
                 <a
                   href="/add-property.html"
@@ -121,12 +121,12 @@ const Navbar = () => {
                   Your Profile
                 </a>
                 <a
-                  href="saved-properties.html"
+                  href="saved-jobs.html"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex="-1"
                   id="user-menu-item-2">
-                  Saved Properties
+                  Saved Jobs
                 </a>
                 <a
                   href="#"
@@ -150,9 +150,9 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="/properties.html"
+            href="/jobs.html"
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
-            Properties
+            Jobs
           </a>
           <a
             href="/add-property.html"

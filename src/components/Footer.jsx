@@ -12,7 +12,7 @@ const Footer = () => {
         {/* <div className="flex flex-wrap justify-center md:justify-start mb-4 md:mb-0">
           <ul className="flex space-x-4">
             <li>
-              <a href="/properties.html">Properties</a>
+              <a href="/jobs.html">Jobs</a>
             </li>
             <li>
               <a href="/terms.html">Terms of Service</a>
