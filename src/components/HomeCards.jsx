@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import cards from '../cards.json';
 
 import Card from './Card';
@@ -11,11 +13,11 @@ const HomeCards = () => {
             <Card key={index} bg={card.bg}>
               <h2 className="text-2xl font-bold">{card.title}</h2>
               <p className="mt-2 mb-4">{card.description}</p>
-              <a
-                href={card.target.link}
+              <Link
+                to={card.target.link}
                 className="inline-block bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-700">
                 {card.target.text}
-              </a>
+              </Link>
             </Card>
           ))}
         </div>

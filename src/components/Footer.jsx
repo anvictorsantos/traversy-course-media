@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
 const Footer = () => {
@@ -9,16 +10,16 @@ const Footer = () => {
         <div className="mb-4 md:mb-0">
           <img src={logo} alt="Logo" className="h-8 w-auto" />
         </div>
-        {/* <div className="flex flex-wrap justify-center md:justify-start mb-4 md:mb-0">
+        <div className="flex flex-wrap justify-center md:justify-start mb-4 md:mb-0">
           <ul className="flex space-x-4">
             <li>
-              <a href="/jobs">Jobs</a>
+              <Link to="/jobs">Jobs</Link>
             </li>
             <li>
-              <a href="/terms.html">Terms of Service</a>
+              <Link to="/terms">Terms of Service</Link>
             </li>
           </ul>
-        </div> */}
+        </div>
         <div>
           <p className="text-sm text-gray-500 mt-2 md:mt-0">
             &copy; {currentYear} JobsPulse. All rights reserved.
