@@ -8,16 +8,17 @@ const Navbar = () => {
       : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
 
   return (
-    <nav className="bg-blue-700 border-b border-blue-500">
+    <nav className="border-b border-blue-500 bg-blue-700">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             <button
               type="button"
               id="mobile-dropdown-button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
               aria-controls="mobile-menu"
-              aria-expanded="false">
+              aria-expanded="false"
+            >
               <span className="absolute -inset-0.5"></span>
               <span className="sr-only">Open main menu</span>
               <svg
@@ -26,7 +27,8 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                aria-hidden="true">
+                aria-hidden="true"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -40,7 +42,7 @@ const Navbar = () => {
             <NavLink className="flex flex-shrink-0 items-center" to="/">
               <img className="h-10 w-auto" src={logo} alt="JobsPulse" />
 
-              <span className="hidden md:block text-white text-2xl font-bold ml-2">JobsPulse</span>
+              <span className="ml-2 hidden text-2xl font-bold text-white md:block">JobsPulse</span>
             </NavLink>
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
@@ -57,20 +59,21 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:block md:ml-6">
+          <div className="hidden md:ml-6 md:block">
             <div className="flex items-center">
-              <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
-                <i className="fa-brands fa-google text-white mr-2"></i>
+              <button className="flex items-center rounded-md bg-gray-700 px-3 py-2 text-white hover:bg-gray-900 hover:text-white">
+                <i className="fa-brands fa-google mr-2 text-white"></i>
                 <span>Login or Register</span>
               </button>
             </div>
           </div>
 
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-            <NavLink to="/messages" className="relative group">
+            <NavLink to="/messages" className="group relative">
               <button
                 type="button"
-                className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-none"
+              >
                 <span className="absolute -inset-1.5"></span>
                 <span className="sr-only">View notifications</span>
                 <svg
@@ -79,7 +82,8 @@ const Navbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  aria-hidden="true">
+                  aria-hidden="true"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -87,7 +91,7 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+              <span className="absolute top-0 right-0 inline-flex -translate-y-1/2 translate-x-1/2 transform items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs leading-none font-bold text-white">
                 2
               </span>
             </NavLink>
@@ -95,10 +99,11 @@ const Navbar = () => {
               <div>
                 <button
                   type="button"
-                  className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-none"
                   id="user-menu-button"
                   aria-expanded="false"
-                  aria-haspopup="true">
+                  aria-haspopup="true"
+                >
                   <span className="absolute -inset-1.5"></span>
                   <span className="sr-only">Open user menu</span>
                   <img className="h-8 w-8 rounded-full" src={logo} alt="" />
@@ -107,17 +112,19 @@ const Navbar = () => {
 
               <div
                 id="user-menu"
-                className="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                className="ring-opacity-5 absolute right-0 z-10 mt-2 hidden w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
-                tabIndex="-1">
+                tabIndex="-1"
+              >
                 <NavLink
                   to="/profile"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex="-1"
-                  id="user-menu-item-0">
+                  id="user-menu-item-0"
+                >
                   Your Profile
                 </NavLink>
                 <NavLink
@@ -125,7 +132,8 @@ const Navbar = () => {
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex="-1"
-                  id="user-menu-item-2">
+                  id="user-menu-item-2"
+                >
                   Saved Jobs
                 </NavLink>
                 <NavLink
@@ -133,7 +141,8 @@ const Navbar = () => {
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex="-1"
-                  id="user-menu-item-2">
+                  id="user-menu-item-2"
+                >
                   Sign Out
                 </NavLink>
               </div>
@@ -143,23 +152,26 @@ const Navbar = () => {
       </div>
 
       <div className="hidden" id="mobile-menu">
-        <div className="space-y-1 px-2 pb-3 pt-2">
+        <div className="space-y-1 px-2 pt-2 pb-3">
           <NavLink
             to="/"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium">
+            className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+          >
             Home
           </NavLink>
           <NavLink
             to="/jobs"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          >
             Jobs
           </NavLink>
           <NavLink
             to="/add-job"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          >
             Add Job
           </NavLink>
-          <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4">
+          <button className="my-4 flex items-center rounded-md bg-gray-700 px-3 py-2 text-white hover:bg-gray-900 hover:text-white">
             <i className="fa-brands fa-google mr-2"></i>
             <span>Login or Register</span>
           </button>

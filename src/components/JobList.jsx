@@ -24,19 +24,19 @@ const JobList = ({ isHome = false }) => {
     };
 
     fetchJobs();
-  }, []);
+  }, [isHome]);
 
   return (
     <section className="bg-blue-50 px-4 pt-6 pb-10">
-      <div className="container-xl lg:container m-auto">
-        <h2 className="text-3xl font-bold text-blue-500 mb-6 text-center">
+      <div className="container-xl m-auto lg:container">
+        <h2 className="mb-6 text-center text-3xl font-bold text-blue-500">
           {isHome ? 'Recent Jobs' : 'All Jobs'}
         </h2>
 
         {loading ? (
           <Spinner loading={loading} />
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {jobs.map((job) => (
               <Job key={job.id} job={job} />
             ))}

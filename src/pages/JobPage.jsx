@@ -8,39 +8,39 @@ const JobPage = () => {
   return (
     <>
       <section>
-        <div className="container m-auto py-6 px-6">
+        <div className="container m-auto px-6 py-6">
           <Link to="/jobs" className="flex items-center text-indigo-500 hover:text-indigo-600">
             <FaArrowLeft className="mr-2" /> Back to Jobs
           </Link>
         </div>
       </section>
       <section className="bg-indigo-50">
-        <div className="container m-auto py-10 px-6">
-          <div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
+        <div className="container m-auto px-6 py-10">
+          <div className="md:grid-cols-70/30 grid w-full grid-cols-1 gap-6">
             <main>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center md:text-left">
-                <div className="text-gray-500 mb-4">{job.type}</div>
-                <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
-                <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
+              <div className="rounded-lg bg-white p-6 text-center shadow-md md:text-left">
+                <div className="mb-4 text-gray-500">{job.type}</div>
+                <h1 className="mb-4 text-3xl font-bold">{job.title}</h1>
+                <div className="mb-4 flex justify-center align-middle text-gray-500 md:justify-start">
                   <FaMapMarker className="mr-1 text-orange-700" />
                   <p className="text-orange-700">{job.location}</p>
                 </div>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-                <h3 className="text-indigo-800 text-lg font-bold mb-6">Job Description</h3>
+              <div className="mt-6 rounded-lg bg-white p-6 shadow-md">
+                <h3 className="mb-6 text-lg font-bold text-indigo-800">Job Description</h3>
 
                 <p className="mb-4">{job.description}</p>
 
-                <h3 className="text-indigo-800 text-lg font-bold mb-2">Salary</h3>
+                <h3 className="mb-2 text-lg font-bold text-indigo-800">Salary</h3>
 
                 <p className="mb-4">{job.salary} / Year</p>
               </div>
             </main>
 
             <aside>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-6">{job.company.name}</h3>
+              <div className="rounded-lg bg-white p-6 shadow-md">
+                <h3 className="mb-6 text-xl font-bold">{job.company.name}</h3>
 
                 <h2 className="text-2xl">NewTek Solutions</h2>
 
@@ -57,14 +57,15 @@ const JobPage = () => {
                 <p className="my-2 bg-indigo-100 p-2 font-bold">{job.company.contactPhone}</p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-                <h3 className="text-xl font-bold mb-6">Manage Job</h3>
+              <div className="mt-6 rounded-lg bg-white p-6 shadow-md">
+                <h3 className="mb-6 text-xl font-bold">Manage Job</h3>
                 <Link
                   to={`/jobs/${id}/edit`}
-                  className="bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                  className="focus:shadow-outline mt-4 block w-full rounded-full bg-indigo-500 px-4 py-2 text-center font-bold text-white hover:bg-indigo-600 focus:outline-none"
+                >
                   Edit Job
                 </Link>
-                <button className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                <button className="focus:shadow-outline mt-4 block w-full rounded-full bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-600 focus:outline-none">
                   Delete Job
                 </button>
               </div>
