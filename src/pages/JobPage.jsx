@@ -61,8 +61,7 @@ const JobPage = () => {
                 <h3 className="mb-6 text-xl font-bold">Manage Job</h3>
                 <Link
                   to={`/jobs/${id}/edit`}
-                  className="focus:shadow-outline mt-4 block w-full rounded-full bg-indigo-500 px-4 py-2 text-center font-bold text-white hover:bg-indigo-600 focus:outline-none"
-                >
+                  className="focus:shadow-outline mt-4 block w-full rounded-full bg-indigo-500 px-4 py-2 text-center font-bold text-white hover:bg-indigo-600 focus:outline-none">
                   Edit Job
                 </Link>
                 <button className="focus:shadow-outline mt-4 block w-full rounded-full bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-600 focus:outline-none">
@@ -77,10 +76,4 @@ const JobPage = () => {
   );
 };
 
-const jobLoader = async ({ params }) => {
-  const res = await fetch(`/api/jobs/${params.id}`);
-  const data = await res.json();
-  return data;
-};
-
-export { JobPage as default, jobLoader };
+export default JobPage;
