@@ -1,9 +1,17 @@
 import { useParams, useLoaderData, Link } from 'react-router-dom';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
+import { PropTypes } from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
-const JobPage = () => {
+const JobPage = ({ deleteJob }) => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const job = useLoaderData();
+
+  const onDeleteClick = async (id) => {
+    await deleteJob(id);
+    navigate('/jobs');
+  };
 
   return (
     <>
@@ -64,7 +72,9 @@ const JobPage = () => {
                   className="focus:shadow-outline mt-4 block w-full rounded-full bg-indigo-500 px-4 py-2 text-center font-bold text-white hover:bg-indigo-600 focus:outline-none">
                   Edit Job
                 </Link>
-                <button className="focus:shadow-outline mt-4 block w-full rounded-full bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-600 focus:outline-none">
+                <button
+                  onClick={() => onDeleteClick(job.id)}
+                  className="focus:shadow-outline mt-4 block w-full cursor-pointer rounded-full bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-600 focus:outline-none">
                   Delete Job
                 </button>
               </div>
@@ -74,6 +84,10 @@ const JobPage = () => {
       </section>
     </>
   );
+};
+
+JobPage.propTypes = {
+  deleteJob: PropTypes.func.isRequired
 };
 
 export default JobPage;

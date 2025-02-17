@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
-const AddJobPage = () => {
+const AddJobPage = ({ addJobSubmit }) => {
+  const navigate = useNavigate();
+
   const [job, setJob] = useState({
     type: '',
     title: '',
@@ -17,17 +21,8 @@ const AddJobPage = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    console.log(job);
-
-    const response = await fetch('http://localhost:3000/jobs', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(job)
-    });
-    const data = await response.json();
-    console.log(data);
+    addJobSubmit(job);
+    return navigate('/jobs');
   };
 
   return (
@@ -204,6 +199,10 @@ const AddJobPage = () => {
       </section>
     </>
   );
+};
+
+AddJobPage.propTypes = {
+  addJobSubmit: PropTypes.func.isRequired
 };
 
 export default AddJobPage;
